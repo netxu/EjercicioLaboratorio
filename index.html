@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="signUpForm">
+      <form onsubmit="onSubmit(event)" id="form">
+        <h1 class="title">Create Account</h1>
+  
+        <div class="inputContainer">
+          <label for="name" class="label">Nombre</label>
+          <input onkeyup="changeInput('name')" type="text" class="input" name="name" id="name">
+          <div class="error-message error-empty">Rellene este campo</div>
+        </div>
+  
+        <div class="inputContainer">
+          <label for="email" class="label">Email</label>
+          <input onkeyup="changeInputEmail()" type="email" class="input" name="email" id="email">
+          <div class="error-message error-empty">Rellene este campo</div>
+          <div class="error-message error-email">Email Inválido</div>
+        </div>
+  
+        <div class="inputContainer">
+          <label for="password" class="label">Clave</label>
+          <input onkeyup="changeInputPassword()" type="password" class="input" name="password" id="password" >
+          <div class="error-message error-empty">Rellene este campo</div>
+          <div class="error-message error-password">No debe tener más de 8 caracteres</div>
+        </div>
+  
+        <div class="inputContainer">
+          <label for="repeat-password" class="label">Confirme su clave</label>
+          <input onkeyup="changeInputRepeatPassword()" type="password" class="input" name="repeat-password" id="repeat-password">
+          <div class="error-message error-empty">Rellene este campo</div>
+          <div class="error-message error-repeat">Las contraseñas no coinciden</div>
+        </div>
+        <button type="submit" id="submitButton">Enviar</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+  html {
+    font-family: 'Montserrat', sans-serif;
+    background-color:#242933;
+  }
+
+  #signUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 14px;
+  }
+
+  #signUpForm #form {
+    background-color: #2f3644;
+    width: 500px;
+    border: 1px outset #acbae1;
+    border-radius: 10px;
+    color: #acbae1;
+    margin-top: 10px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  
+  #signUpForm #form .title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #acbae1;
+  }
+
+  #signUpForm #form .inputContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #signUpForm #form .inputContainer.error:after,
+  #signUpForm #form .inputContainer.success:after{
+    content: "";
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #signUpForm #form .inputContainer.error:after{
+    background-image: url('images/error-icon.svg');
+  }
+
+  #signUpForm #form .inputContainer.success:after{
+    background-image: url('images/success-icon.svg');
+  }
+
+  #signUpForm #form .inputContainer label.label{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #signUpForm #form .inputContainer input.input, 
+  #signUpForm #form .inputContainer input.input:active, 
+  #signUpForm #form .inputContainer input.input:focus {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 3px;
+  }
+
+  #signUpForm #form .inputContainer.error input.input{
+    border: 1px solid #f00;
+  }
+
+  #signUpForm #form .inputContainer.success input.input{
+    border: 1px solid #0f0;
+  }
+
+  #signUpForm #form .inputContainer .error-message{
+    display: none;
+    color: #f00;
+  }
+
+  #signUpForm #form .inputContainer.error .error-message.show{
+    display: block;
+  }
+
+  #signUpForm #form #submitButton {
+    background: #6c63ff;
+    color: white;
+    border-style: outset;
+    border-color: #0f0f0f;
+    border-radius: 5px;
+    width: 100%;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 10px;
+    margin: 5px 0;
+  }
+
+  .submitButton:hover {
+    background-color: #362cfa;
+  }
